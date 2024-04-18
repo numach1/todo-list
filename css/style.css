@@ -1,0 +1,200 @@
+@charset "UTF-8";
+:root{
+  --primary-space: 0.5rem;
+  --secondary-space: 0.3rem;
+}
+
+html{
+  font-size: 16px;
+}
+
+/*----------------------------------- 
+  リセットCSS
+------------------------------------*/
+*,*::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+ol,ul{
+  list-style: none;
+}
+
+input{
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  display: block;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none
+}
+
+/*--------------------------------- 
+  共通CSS
+-----------------------------------*/
+.addBtn, .removeBtn{
+  color: #fff;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*---------------------------------- 
+  コンテンツボックス
+----------------------------------*/
+.container{
+  max-width: 600px;
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+/*------------------------------- 
+  h1
+--------------------------------*/
+h1{
+  text-align: center;
+  font-size: 2rem;
+  padding: 10vh 0 8vh;
+}
+
+/*--------------------------------- 
+  使い方
+----------------------------------*/
+.container section h2{
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-bottom: 0.7rem;
+}
+
+.how2{
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.how2 li + li{
+  padding-top: var(--primary-space);
+}
+
+.how2 li:first-child span{
+  background: linear-gradient(transparent 80%, #027c3b 20%);
+}
+
+.how2 li:last-child span{
+  background: linear-gradient(transparent 80%, #a30404 20%);
+}
+
+/*-------------------------------- 
+  タスク入力エリア
+---------------------------------*/
+.taskArea{
+  margin-bottom: 1rem;
+}
+
+.taskArea > label{
+  display: block;
+  margin-bottom: var(--primary-space);
+  padding-left: var(--secondary-space);
+  font-weight: bold;
+  border-left: 5px solid #000;
+}
+
+.deadLine{
+  margin-bottom: var(--primary-space);
+}
+
+.task{
+  display: flex;
+}
+
+.textArea{
+  line-height: 30px;
+  width: 90%;
+  border-bottom: 1px solid #000;
+  margin-right: auto;
+  padding-left: var(--primary-space);
+}
+
+.addBtn{
+  background-color: #7bbb99;
+  transition: .6s;
+}
+
+.addBtn:hover{
+  background-color: #027c3b;
+}
+
+input[type="text"]::placeholder{
+  font-weight: bold;
+}
+
+/*-------------------------------- 
+  タスク表示エリア
+---------------------------------*/
+h3{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* 以下JSで要素を生成 */
+.todoList li + li{
+  padding-top: 1rem
+}
+
+.listInner,.listItem{
+  display: flex;
+}
+
+.listInner{
+  margin-bottom: var(--primary-space);
+}
+
+.listItem{
+  width: 90%;
+  border-bottom: 1px solid #000;
+  margin-right: auto;
+  padding-left: var(--primary-space);
+}
+
+.check{
+  margin-right: var(--secondary-space);
+}
+
+.listItem p{
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.removeBtn{
+  background-color: #a75151;
+  transition: .6s;
+}
+
+.removeBtn:disabled{
+  cursor: default;
+}
+
+.date{
+  padding-bottom: var(--primary-space);
+  width: 50%;
+}
+
+.dateArea{
+  display: flex;
+}
