@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ToDoリストver.2</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/c409a97812.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<h1>ToDoリストver.2</h1>
+
+		<div class="container">
+			<!-- 使い方 -->
+			<section>
+				<h2>使い方</h2>
+
+				<ul class="how2">
+					<li>・やることを入力して<span>鉛筆ボタン</span>で登録</li>
+					<li>・完了したらチェックをつけて<span>ゴミ箱ボタン</span>で削除</li>
+				</ul>
+			</section>
+
+			<!-- タスク入力 -->
+			<div class="taskArea">
+				<label>期日を選択</label>
+				<input type="date" class="deadLine" min="2024-01-01" max="2030-01-01">
+				
+				<div class="task">
+					<input type="text" class="textArea" placeholder="タスクを入力する">
+					<button class="addBtn"><i class="fa-solid fa-pencil"></i></button>
+				</div>
+			</div><!-- taskArea -->
+
+			<!-- タスク表示 -->
+			<section>
+				<h3>タスク</h3>
+				
+				<ul class="todoList">
+					<!-- 中身をJSで生成し追加 -->
+				</ul>
+			</section>
+		</div><!-- /.container -->
+
+		<script src="js/index.js"></script>
+	</body>
+</html>
